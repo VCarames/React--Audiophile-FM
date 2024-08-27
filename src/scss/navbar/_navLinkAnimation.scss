@@ -1,0 +1,32 @@
+.nav__menu.expanded li {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideIn 0.5s ease forwards;
+}
+
+.nav__menu li:nth-child(1) {
+  display: none;
+
+  @media (min-width: 62.5rem) {
+    display: block;
+  }
+}
+
+.nav__menu.expanded li:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.nav__menu.expanded li:nth-child(3) {
+  animation-delay: 0.8s;
+}
+
+.nav__menu.expanded li:nth-child(4) {
+  animation-delay: 1.2s;
+}
+
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
