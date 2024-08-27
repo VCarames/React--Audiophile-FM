@@ -1,0 +1,44 @@
+.header {
+  z-index: 99;
+  position: relative;
+
+  padding: 2rem 1.5rem 2.06rem 1.5rem;
+  background: var(--primary-clr-two);
+
+  @media (min-width: 47.5rem) {
+    padding: 2rem 2.5rem 2.06rem 2.44rem;
+  }
+
+  @media (min-width: 62.5rem) {
+    padding: 2.19rem 2.5rem 2.06rem 2.44rem;
+  }
+
+  &__content {
+    max-width: 69.38rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin: auto;
+  }
+
+  &__links {
+    width: 100%;
+    display: grid;
+    grid-template-areas: "nav logo";
+    align-items: center;
+
+    @media (min-width: 47.5rem) {
+      grid-template-areas: "nav logo  . . . . . . . . . .";
+    }
+
+    @media (min-width: 62.5rem) {
+      grid-template-areas: "logo nav";
+      grid-template-columns: 1fr 2.2fr;
+    }
+  }
+
+  &__logo {
+    grid-area: logo;
+  }
+}
