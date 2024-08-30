@@ -13,19 +13,19 @@ const NavMenu = ({ isNavExpanded, navMenuRef, handleFocusOut }) => {
       <NavLinks
         imgClass="nav__menu-img nav__menu-img--one"
         img="/assets/shared/desktop/image-category-thumbnail-headphones.png"
-        to="/category"
+        to="/category/headphones"
         category="Headphones"
       />
       <NavLinks
         imgClass="nav__menu-img nav__menu-img--two"
         img="/assets/shared/desktop/image-category-thumbnail-speakers.png"
-        to="/category"
+        to="/category/speakers"
         category="Speakers"
       />
       <NavLinks
         imgClass="nav__menu-img nav__menu-img--three"
         img="/assets/shared/desktop/image-category-thumbnail-earphones.png"
-        to="/category"
+        to="/category/earphones"
         category="Earphones"
       />
     </ul>
