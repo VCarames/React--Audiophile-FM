@@ -1,0 +1,28 @@
+.product-category {
+  padding: 0 24px;
+  margin-top: 64px;
+
+  @media (min-width: 760px) {
+    padding: 0 40px 0 39px;
+    margin-top: 120px;
+  }
+
+  @media (min-width: 1000px) {
+    margin-top: 160px;
+  }
+
+  &__content {
+    max-width: 1110px;
+
+    margin: 0 auto;
+  }
+
+  &__list {
+    display: grid;
+    gap: 120px;
+
+    @media (min-width: 62.5rem) {
+      gap: 10rem;
+    }
+  }
+}
