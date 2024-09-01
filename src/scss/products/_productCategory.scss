@@ -1,25 +1,25 @@
 .product-category {
-  padding: 0 24px;
-  margin-top: 64px;
+  padding: 0 1.5rem;
+  margin-top: 4rem;
 
-  @media (min-width: 760px) {
-    padding: 0 40px 0 39px;
-    margin-top: 120px;
+  @media (min-width: 47.5rem) {
+    padding: 0 2.5rem 0 2.44rem;
+    margin-top: 7.5rem;
   }
 
-  @media (min-width: 1000px) {
-    margin-top: 160px;
+  @media (min-width: 62.5rem) {
+    margin-top: 10rem;
   }
 
   &__content {
-    max-width: 1110px;
+    max-width: 69.38rem;
 
     margin: 0 auto;
   }
 
   &__list {
     display: grid;
-    gap: 120px;
+    gap: 7.5rem;
 
     @media (min-width: 62.5rem) {
       gap: 10rem;
