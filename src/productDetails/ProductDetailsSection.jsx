@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import productsData from "/public/data/Products.json";
 import ProductDetailsContainer from "../productDetails/ProductDetailsContainer";
 import ProductDetailsFeatures from "../productDetails/ProductDetailsFeatures";
@@ -13,19 +13,27 @@ const ProductDetailsSection = () => {
     return <h1 className="product-details__not-found">Product not found</h1>;
   }
 
-  const { featuresOne, featuresTwo, boxContents, gallery } = product;
+  const { featuresOne, featuresTwo, boxContents, gallery, category } = product;
 
   return (
     <section className="product-details">
-      <ProductDetailsContainer product={product} />
-      <div className="product-details__additional-info">
-        <ProductDetailsFeatures
-          featuresOne={featuresOne}
-          featuresTwo={featuresTwo}
-        />
-        <ProductDetailsBoxContents boxContents={boxContents} />
+      <div className="product-details__content">
+        <Link
+          className="product-details__link"
+          to={`/category/${category.toLowerCase()}`}
+        >
+          Go Back
+        </Link>
+        <ProductDetailsContainer product={product} />
+        <div className="product-details__additional-info">
+          <ProductDetailsFeatures
+            featuresOne={featuresOne}
+            featuresTwo={featuresTwo}
+          />
+          <ProductDetailsBoxContents boxContents={boxContents} />
+        </div>
+        <ProductDetailsGallery gallery={gallery} />
       </div>
-      <ProductDetailsGallery gallery={gallery} />
     </section>
   );
 };
