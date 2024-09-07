@@ -1,17 +1,17 @@
 import { Link } from "react-router-dom";
 
 const ProductCategoryItem = ({ product }) => {
-  const { id, showRibbon, ribbon, name, description, images } = product;
+  const { id, showRibbon, ribbon, name, description, previewImages } = product;
 
   return (
     <li className="product-category-item">
       <picture className="product-category-item__picture">
-        <source media="(min-width: 62.5rem)" srcSet={images.large} />
-        <source media="(min-width: 47.5rem)" srcSet={images.medium} />
+        <source srcSet={previewImages.desktop} media="(min-width: 62.5rem)" />
+        <source srcSet={previewImages.tablet} media="(min-width: 47.5rem)" />
         <img
+          src={previewImages.mobile}
+          alt={`Preview of ${name}`}
           className="product-category-item__picture--img"
-          src={images.small}
-          alt={name}
         />
       </picture>
       <div className="product-category-item__details">
