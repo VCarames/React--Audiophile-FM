@@ -1,0 +1,136 @@
+.product-details {
+  &__container {
+    display: grid;
+    gap: 2rem;
+
+    margin-top: 1.44rem;
+
+    @media (min-width: 47.5rem) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.19rem;
+
+      margin-top: 1.5rem;
+    }
+
+    @media (min-width: 62.5rem) {
+      gap: 1.88rem;
+
+      margin-top: 3.5rem;
+    }
+  }
+
+  &__picture {
+    border-radius: 0.5rem;
+    overflow: hidden;
+
+    &--img {
+      width: 100%;
+    }
+
+    @media (min-width: 47.5rem) {
+      max-width: 17.56rem;
+    }
+
+    @media (min-width: 62.5rem) {
+      max-width: 100%;
+    }
+  }
+
+  &__info {
+    @media (min-width: 62.5rem) {
+      max-width: 445px;
+      justify-self: end;
+    }
+  }
+
+  &__ribbon {
+    color: var(--primary-clr-one);
+    font-size: var(--font-size-14);
+    font-weight: var(--font-weight-400);
+    line-height: normal;
+    letter-spacing: 0.63rem;
+    text-transform: uppercase;
+
+    margin-bottom: 1.5rem;
+
+    @media (min-width: 47.5rem) {
+      font-size: var(--font-size-12);
+      letter-spacing: 0.54rem;
+
+      margin: 2.75rem 0 1.06rem 0;
+    }
+
+    @media (min-width: 62.5rem) {
+      font-size: var(--font-size-14);
+      letter-spacing: 0.63rem;
+
+      margin: 4.81rem 0 1rem 0;
+    }
+  }
+
+  &__name {
+    color: var(--primary-clr-two);
+    font-size: var(--font-size-28);
+    font-weight: var(--font-weight-700);
+    line-height: normal;
+    letter-spacing: 0.06rem;
+    text-transform: uppercase;
+
+    margin-bottom: 1.5rem;
+
+    @media (min-width: 47.5rem) {
+      line-height: 1.14;
+
+      margin-bottom: 2rem;
+    }
+
+    @media (min-width: 62.5rem) {
+      font-size: var(--font-size-40);
+      line-height: 1.1;
+      letter-spacing: 0.09rem;
+    }
+  }
+
+  &__description {
+    max-width: 46ch;
+
+    color: var(--primary-clr-two);
+    font-size: var(--font-size-15);
+    font-weight: var(--font-weight-400);
+    line-height: 1.67;
+
+    opacity: 0.5;
+
+    margin-bottom: 1.44rem;
+
+    @media (min-width: 47.5rem) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__price {
+    color: var(--primary-clr-two);
+    font-size: var(--font-size-18);
+    font-weight: var(--font-weight-700);
+    line-height: normal;
+    letter-spacing: 0.08rem;
+    text-transform: uppercase;
+
+    margin-bottom: 1.94rem;
+
+    @media (min-width: 47.5rem) {
+      margin-bottom: 1.88rem;
+    }
+
+    @media (min-width: 62.5rem) {
+      margin-bottom: 2.94rem;
+    }
+  }
+
+  &__controls {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 1.25rem;
+  }
+}
