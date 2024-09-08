@@ -1,0 +1,43 @@
+.product-details__features {
+  display: grid;
+  gap: 1.5rem;
+
+  @media (min-width: 47.5rem) {
+    gap: 2rem;
+  }
+
+  &-title {
+    color: var(--primary-clr-two);
+    font-size: var(-font-size-24);
+    font-style: normal;
+    font-weight: var(--font-weight-700);
+    line-height: 1.5;
+    letter-spacing: 0.05rem;
+    text-transform: uppercase;
+
+    @media (min-width: 47.5rem) {
+      font-size: var(--font-size-32);
+      line-height: 1.13;
+      letter-spacing: 0.07rem;
+    }
+  }
+
+  &-content {
+    display: grid;
+    gap: 1.56rem;
+
+    @media (min-width: 47.5rem) {
+      gap: 1.5rem;
+    }
+  }
+
+  &-text {
+    color: var(--primary-clr-two);
+    font-size: var(--font-size-15);
+    font-style: normal;
+    font-weight: var(--font-weight-400);
+    line-height: 1.67;
+
+    opacity: 0.5;
+  }
+}
