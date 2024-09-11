@@ -4,7 +4,7 @@ function FooterSocialLinks() {
   return (
     <ul className="footer-socials" role="list">
       <li className="footer-socials__item" role="listitem">
-        <Link className="footer-socials__link" aria-label="Facebook">
+        <Link className="footer-socials__link" to="/" aria-label="Facebook">
           <svg
             className="footer-socials__icon"
             width="24"
@@ -19,7 +19,7 @@ function FooterSocialLinks() {
       </li>
 
       <li className="footer-socials__item" role="listitem">
-        <Link className="footer-socials__link" aria-label="Twitter">
+        <Link className="footer-socials__link" to="/" aria-label="Twitter">
           <svg
             className="footer-socials__icon"
             width="24"
@@ -34,7 +34,7 @@ function FooterSocialLinks() {
       </li>
 
       <li className="footer-socials__item" role="listitem">
-        <Link className="footer-socials__link" aria-label="Instagram">
+        <Link className="footer-socials__link" to="/" aria-label="Instagram">
           <svg
             className="footer-socials__icon"
             width="24"
