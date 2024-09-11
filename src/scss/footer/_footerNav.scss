@@ -1,0 +1,33 @@
+.footer-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.94rem;
+
+  text-align: center;
+
+  @media (min-width: 47.5rem) {
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+  }
+  @media (min-width: 62.5rem) {
+    gap: 2rem;
+  }
+
+  &__link {
+    color: var(--neutral-clr-one);
+    font-size: var(--font-size-13);
+    font-weight: var(--font-weight-700);
+    line-height: 1.92;
+    letter-spacing: 0.13rem;
+    text-transform: uppercase;
+
+    @media (hover: hover) {
+      &:is(:hover, :focus, :focus-visible) {
+        color: var(--primary-clr-one);
+        outline: none;
+        transition: 0.8s all;
+      }
+    }
+  }
+}
