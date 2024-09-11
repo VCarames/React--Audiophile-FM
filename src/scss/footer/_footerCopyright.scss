@@ -1,0 +1,18 @@
+.footer-copyright {
+  grid-area: copyright;
+
+  margin-bottom: 3rem;
+
+  @media (min-width: 47.5rem) {
+    margin-bottom: 0;
+  }
+
+  &__text {
+    color: var(--neutral-clr-one);
+    font-size: var(--font-size-15);
+    font-weight: var(--font-weight-700);
+    line-height: 1.67;
+
+    opacity: 0.5;
+  }
+}
