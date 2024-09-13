@@ -1,0 +1,43 @@
+.product-recommendation {
+  padding: 0 1.5rem;
+  margin-bottom: 10.75rem;
+
+  @media (min-width: 47.5rem) {
+    padding: 0 1.88rem 0 2.44rem;
+    margin-bottom: 10.75rem;
+  }
+
+  @media (min-width: 62.5rem) {
+    padding: 0 2.44rem;
+    margin-bottom: 15rem;
+  }
+
+  &__content {
+    max-width: 69.38rem;
+    margin: 0 auto;
+  }
+
+  &__title {
+    color: var(--primary-clr-two);
+    text-align: center;
+    font-size: var(--font-size-24);
+    font-weight: var(--font-weight-700);
+    line-height: 1.5;
+    letter-spacing: 0.857px;
+    text-transform: uppercase;
+
+    margin-bottom: 2.5rem;
+
+    @media (min-width: 47.5rem) {
+      font-size: var(--font-size-32);
+      line-height: 1.13;
+      letter-spacing: 1.143px;
+
+      margin-bottom: 3.5rem;
+    }
+
+    @media (min-width: 62.5rem) {
+      margin-bottom: 4rem;
+    }
+  }
+}
