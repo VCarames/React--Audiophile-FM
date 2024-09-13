@@ -1,0 +1,44 @@
+.product-recommendation-list {
+  display: grid;
+  gap: 3.5rem;
+
+  @media (min-width: 47.5rem) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.69rem;
+  }
+
+  @media (min-width: 62.5rem) {
+    gap: 1.88rem;
+  }
+
+  &__item {
+    display: grid;
+    justify-items: center;
+    gap: 2rem;
+
+    @media (min-width: 47.5rem) {
+      gap: 2.5rem;
+    }
+  }
+
+  &__picture {
+    border-radius: 0.5rem;
+    overflow: hidden;
+  }
+
+  &__details {
+    display: grid;
+    justify-items: center;
+    gap: 2rem;
+  }
+
+  &__title {
+    color: var(--primary-clr-two);
+    text-align: center;
+    font-size: var(--font-size-24);
+    font-weight: var(--font-weight-700);
+    line-height: normal;
+    letter-spacing: 1.714px;
+    text-transform: uppercase;
+  }
+}
