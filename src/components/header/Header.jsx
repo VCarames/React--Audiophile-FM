@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import Navbar from "../navbar/Navbar";
 import Logo from "/assets/shared/desktop/logo.svg";
-import CartButton from "../cart/CartButton";
+import Cart from "../cart/Cart";
 
 function Header() {
   return (
@@ -13,7 +13,7 @@ function Header() {
             <img src={Logo} alt="" />
           </Link>
         </div>
-        <CartButton />
+        <Cart />
       </div>
     </header>
   );
