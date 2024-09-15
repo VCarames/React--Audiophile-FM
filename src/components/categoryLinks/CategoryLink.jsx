@@ -1,9 +1,13 @@
 import { Link } from "react-router-dom";
 
-function CategoryLink({ img, heading, link }) {
+function CategoryLink({ CategoryImageClass, img, heading, link }) {
   return (
     <li className="category-link">
-      <img className="category-link__image" src={img} alt="" />
+      <img
+        className={`category-link__image ${CategoryImageClass}`}
+        src={img}
+        alt=""
+      />
 
       <Link className="category-link__link" to={link}>
         <h3 className="category-link__title">{heading}</h3>
