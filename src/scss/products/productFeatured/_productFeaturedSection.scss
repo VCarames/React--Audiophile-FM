@@ -1,0 +1,20 @@
+.product-featured {
+  padding: 0 1.5rem;
+  margin-bottom: 120px;
+
+  @media (min-width: 47.5rem) {
+    padding: 0 2rem 0 2.44rem;
+    margin-bottom: 6.06rem;
+  }
+
+  @media (min-width: 62.5rem) {
+    padding: 0 2rem 0 2rem;
+    margin-bottom: 12.5rem;
+  }
+
+  &__content {
+    max-width: 69.38rem;
+
+    margin: 0 auto;
+  }
+}
