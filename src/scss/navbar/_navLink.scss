@@ -1,24 +1,14 @@
 .nav__menu {
-  &-link {
-    display: grid;
-    justify-items: center;
-
-    padding: 5.5rem 1.25rem 1.31rem 1.25rem;
-    border-radius: 8px;
-    background: #f1f1f1;
-
+  &-item {
     position: relative;
-
-    @media (min-width: 62.5rem) {
-      padding: 0;
-      border-radius: 0;
-      background: transparent;
-    }
   }
 
   &-img {
     position: absolute;
     top: -3.25rem;
+
+    left: 50%;
+    transform: translateX(-50%);
 
     &--one {
       width: 8.88rem;
@@ -34,6 +24,29 @@
 
     @media (min-width: 62.5rem) {
       display: none;
+    }
+  }
+
+  &-link {
+    display: grid;
+    justify-items: center;
+
+    padding: 5.5rem 1.25rem 1.31rem 1.25rem;
+    border-radius: 8px;
+    background: #f1f1f1;
+
+    @media (min-width: 62.5rem) {
+      padding: 0;
+      border-radius: 0;
+      background: transparent;
+    }
+
+    @media (hover: hover) {
+      &:is(:hover, :focus, :focus-visible) {
+        outline: solid 0.13rem var(--primary-clr-one);
+        outline-offset: 0.38rem;
+        transition: 0.8s all;
+      }
     }
   }
 
