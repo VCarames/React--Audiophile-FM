@@ -1,14 +1,14 @@
 .hero {
   background: var(--primary-clr-three);
 
-  margin: 0 0 5.75rem 0;
+  margin: 0 0 5.69rem 0;
 
   @media (min-width: 47.5rem) {
-    margin: 0 0 6.03rem 0;
+    margin: 0 0 9.19rem 0;
   }
 
   @media (min-width: 62.5rem) {
-    margin: 0 0 7.97rem 0;
+    margin: 0 0 12.5rem 0;
   }
 
   &__content {
@@ -19,7 +19,7 @@
     background-repeat: no-repeat;
     background-position: 0% 100%;
 
-    padding: 6.75rem 1.5rem 6.75rem 1.44rem;
+    padding: 6.63rem 1.5rem 6.94rem 1.44rem;
     margin: 0 auto;
 
     @media (min-width: 47.5rem) {
@@ -27,7 +27,7 @@
       background-size: 101%;
       background-position: 0% 101%;
 
-      padding: 7.81rem 1.5rem 10.44rem 1.44rem;
+      padding: 7.81rem 1.56rem 10.44rem 2.06rem;
     }
 
     @media (min-width: 62.5rem) {
@@ -37,7 +37,7 @@
       background-image: url(/assets/home/desktop/image-hero.jpg);
       background-size: auto;
       background-position: 50% 100%;
-      padding: 8.19rem 2.5rem 9.88rem 2.5rem;
+      padding: 7.94rem 2.5rem 9.88rem 2.5rem;
     }
   }
 
@@ -74,7 +74,7 @@
   &__title {
     color: var(--neutral-clr-one);
     font-size: var(--font-size-36);
-    font-weight: var(-font-weight-700);
+    font-weight: var(--font-weight-700);
     line-height: 1.11;
     letter-spacing: 0.08rem;
     text-transform: uppercase;
