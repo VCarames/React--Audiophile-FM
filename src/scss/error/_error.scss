@@ -1,0 +1,49 @@
+.error {
+  min-height: 100dvh;
+
+  display: grid;
+  place-content: center;
+
+  padding: 1.5rem;
+  background: var(--primary-clr-two);
+
+  &__content {
+    max-width: 69.38rem;
+
+    display: grid;
+    justify-items: center;
+    gap: 2rem;
+
+    color: var(--neutral-clr-one);
+    text-align: center;
+
+    margin: 0 auto;
+  }
+
+  &__logo-link--img {
+    width: 15rem;
+
+    @media (min-width: 47.5rem) {
+      width: 21.25rem;
+    }
+  }
+
+  &__title {
+    display: grid;
+    gap: 1rem;
+
+    font-size: var(--font-size-36);
+    font-weight: var(--font-weight-700);
+    line-height: 1.11;
+    letter-spacing: 1.286px;
+    text-transform: uppercase;
+  }
+
+  &__message {
+    font-size: var(--font-size-18);
+    font-weight: var(--font-weight-400);
+    line-height: 1.67;
+
+    opacity: 0.75;
+  }
+}
