@@ -14,7 +14,9 @@ function Hero() {
               Experience natural, lifelike audio and exceptional build quality
               made for the passionate music enthusiast.
             </p>
-            <Link className="hero__button button button--one">See Product</Link>
+            <Link className="hero__button button button--one" to="/product/1">
+              See Product
+            </Link>
           </div>
         </div>
       </div>
