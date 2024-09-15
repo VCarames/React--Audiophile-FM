@@ -1,13 +1,18 @@
 .about-text {
   display: grid;
   justify-items: center;
-  gap: 2rem;
+  gap: 1.63rem;
 
   text-align: center;
+
+  @media (min-width: 47.5rem) {
+    gap: 1.94rem;
+  }
 
   @media (min-width: 62.5rem) {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
+    justify-items: start;
     text-align: start;
   }
 
@@ -27,8 +32,12 @@
     @media (min-width: 47.5rem) {
       font-size: var(--font-size-40);
       line-height: 1.1;
-      letter-spacing: 0.09em;
+      letter-spacing: 1.4px;
       text-transform: uppercase;
+    }
+
+    @media (min-width: 62.5rem) {
+      max-width: 18ch;
     }
   }
 
@@ -39,5 +48,13 @@
     line-height: 1.67;
 
     opacity: 0.5;
+
+    @media (min-width: 47.5rem) {
+      max-width: 62ch;
+    }
+
+    @media (min-width: 62.5rem) {
+      max-width: 47ch;
+    }
   }
 }
