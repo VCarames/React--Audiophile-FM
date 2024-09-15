@@ -10,7 +10,7 @@ const ProductCategoryItem = ({ product }) => {
         <source srcSet={previewImages.tablet} media="(min-width: 47.5rem)" />
         <img
           src={previewImages.mobile}
-          alt={`Preview of ${name}`}
+          alt={name}
           className="product-category-item__picture--img"
         />
       </picture>
@@ -22,7 +22,7 @@ const ProductCategoryItem = ({ product }) => {
         <p className="product-category-item__description">{description}</p>
         <Link
           to={`/product/${id}`}
-          className="product-category-item__link button"
+          className="product-category-item__link button button--one"
         >
           See Product
         </Link>
