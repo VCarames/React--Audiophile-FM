@@ -4,17 +4,22 @@
   gap: 2rem;
 
   @media (min-width: 47.5rem) {
-    gap: 52px;
+    gap: 3.44rem;
   }
 
   @media (min-width: 62.5rem) {
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "picture details";
     align-items: center;
-    gap: 52px;
+    gap: 1.75rem;
 
     &:nth-child(even) {
       grid-template-areas: "details picture";
+
+      .product-category-item__details {
+        justify-self: start;
+        transform: translateX(0);
+      }
     }
   }
 
@@ -44,15 +49,18 @@
     }
 
     @media (min-width: 62.5rem) {
+      max-width: 27.38rem;
       justify-items: start;
+      justify-self: end;
 
       text-align: start;
+
+      transform: translateX(-0.44rem);
     }
   }
 
   &__ribbon {
     color: var(--primary-clr-one);
-    text-align: center;
     font-size: var(--font-size-14);
     font-weight: var(--font-weight-400);
     line-height: normal;
@@ -61,14 +69,21 @@
   }
 
   &__title {
+    max-width: 14ch;
+
     color: var(--primary-clr-two);
-    font-size: var(--font-size-40);
+    font-size: var(--font-size-28);
+    font-style: normal;
     font-weight: var(--font-weight-700);
-    line-height: 1.1;
-    letter-spacing: 0.09em;
+    line-height: normal;
+    letter-spacing: 0.06rem;
     text-transform: uppercase;
 
     @media (min-width: 47.5rem) {
+      font-size: var(--font-size-40);
+      line-height: 1.1;
+      letter-spacing: 1.4px;
+
       margin-bottom: 1rem;
     }
   }
@@ -82,6 +97,8 @@
     opacity: 0.5;
 
     @media (min-width: 47.5rem) {
+      max-width: 60ch;
+
       margin-bottom: 0.5rem;
     }
 
