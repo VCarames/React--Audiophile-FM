@@ -1,14 +1,17 @@
 .category-intro {
-  padding: 2rem 2rem;
+  padding: 1.94rem 2rem 1.94rem 2rem;
+  margin-bottom: 64px;
 
   background: var(--primary-clr-two);
 
   @media (min-width: 47.5rem) {
     padding: 6.56rem 2rem 6.06rem 2rem;
+    margin-bottom: 120px;
   }
 
   @media (min-width: 62.5rem) {
     padding: 6.13rem 2rem 6.06rem 2rem;
+    margin-bottom: 160px;
   }
 
   &__header {
