@@ -1,6 +1,7 @@
 .product-details {
   padding: 0 1.5rem;
   margin-top: 1rem;
+  margin-bottom: 7.5rem;
 
   @media (min-width: 47.5rem) {
     padding: 0 2.44rem;
@@ -9,6 +10,7 @@
 
   @media (min-width: 62.5rem) {
     margin-top: 4.94rem;
+    margin-bottom: 10rem;
   }
 
   &__content {
