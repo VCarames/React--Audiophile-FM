@@ -1,0 +1,78 @@
+.checkout-input__group {
+  display: grid;
+  gap: 0.56rem;
+
+  &--name {
+    grid-area: name;
+  }
+
+  &--email {
+    grid-area: email;
+  }
+
+  &--phone {
+    grid-area: phone;
+  }
+
+  &--address {
+    grid-area: address;
+  }
+
+  &--city {
+    grid-area: city;
+  }
+
+  &--zip {
+    grid-area: zip;
+  }
+
+  &--country {
+    grid-area: country;
+  }
+
+  &--label {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.checkout-label {
+  color: var(--primary-clr-two);
+  font-size: var(--font-size-12);
+  font-weight: var(--font-weight-700);
+  line-height: normal;
+  letter-spacing: -0.214px;
+}
+
+.checkout__input {
+  color: var(--primary-clr-two);
+  font-size: var(--font-size-14);
+  font-weight: var(--font-weight-700);
+  line-height: normal;
+  letter-spacing: -0.25px;
+
+  border-radius: 0.5rem;
+  border: 0.06rem solid var(--neutral-clr-four);
+  background: var(--neutral-clr-one);
+
+  padding: 1.13rem 0.88rem 1.19rem 1.5rem;
+
+  &::placeholder {
+    color: var(--primary-clr-two);
+    font-size: var(--font-size-14);
+    font-weight: var(--font-weight-700);
+    line-height: normal;
+    letter-spacing: -0.25px;
+
+    opacity: 0.4;
+  }
+}
+
+.checkout__error-text {
+  color: var(--error-clr);
+  text-align: right;
+  font-size: var(--font-size-12);
+  font-weight: var(--font-weight-400);
+  line-height: normal;
+  letter-spacing: -0.214px;
+}
