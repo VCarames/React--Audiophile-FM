@@ -1,0 +1,19 @@
+.cart-button {
+  grid-area: cart;
+  background: none;
+
+  &__icon {
+    fill: var(--neutral-clr-one);
+
+    @media (min-width: 62.5rem) {
+      margin-top: 0.5rem;
+    }
+
+    @media (hover: hover) {
+      &:is(:hover, :focus, :focus-visible) {
+        fill: var(--primary-clr-one);
+        transition: 0.8s all;
+      }
+    }
+  }
+}
