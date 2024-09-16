@@ -1,0 +1,26 @@
+.cart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  color: var(--primary-clr-two);
+
+  &__title {
+    font-size: var(--font-size-18);
+    font-weight: var(--font-weight-700);
+    line-height: normal;
+    letter-spacing: 1.286px;
+    text-transform: uppercase;
+  }
+
+  &__clear-btn {
+    font-size: var(--font-size-15);
+    font-weight: var(--font-weight-400);
+    line-height: 1.67;
+    text-decoration-line: underline;
+    text-transform: capitalize;
+
+    opacity: 0.5;
+    background: none;
+  }
+}
