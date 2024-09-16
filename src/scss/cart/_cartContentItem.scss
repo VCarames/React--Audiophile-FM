@@ -1,0 +1,33 @@
+.cart-content-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+
+  &__thumbnail {
+    width: 4rem;
+    height: 4rem;
+
+    border-radius: 0.5rem;
+  }
+
+  &__info {
+    display: grid;
+
+    color: var(--primary-clr-two);
+    font-weight: var(--font-weight-700);
+  }
+
+  &__name {
+    font-size: var(--font-size-15);
+    line-height: 1.67;
+    text-transform: uppercase;
+  }
+
+  &__price {
+    font-size: var(--font-size-14);
+    line-height: 1.79;
+
+    opacity: 0.5;
+  }
+}
