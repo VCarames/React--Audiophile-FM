@@ -10,10 +10,18 @@ function CheckoutInput({
   placeholder,
 }) {
   return (
-    <div className={`checkout__input-group ${checkoutInputGroupClass}`}>
-      <label className="checkout__label" htmlFor={htmlFor}>
-        {label}
-      </label>
+    <div className={`checkout-input__group ${checkoutInputGroupClass}`}>
+      <div className="checkout-input__group--label">
+        <label className="checkout__label" htmlFor={htmlFor}>
+          {label}
+        </label>
+        <div id="checkout__error" aria-live="assertive">
+          <span
+            className="checkout__error-text"
+            id={`checkout__error-text ${errorId}`}
+          ></span>
+        </div>
+      </div>
       <input
         className="checkout__input"
         id={idNameInput}
@@ -24,12 +32,6 @@ function CheckoutInput({
         placeholder={placeholder}
         required
       ></input>
-      <div id="checkout__error" aria-live="assertive">
-        <span
-          className="checkout__error-text"
-          id={`checkout__error-text ${errorId}`}
-        ></span>
-      </div>
     </div>
   );
 }
