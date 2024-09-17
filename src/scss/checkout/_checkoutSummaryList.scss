@@ -1,0 +1,51 @@
+.checkout-summary__list {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.checkout-summary-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__content {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    color: var(--primary-clr-two);
+    font-weight: var(--font-weight-700);
+  }
+
+  &__image {
+    width: 4rem;
+    height: 4rem;
+
+    border-radius: 0.5rem;
+    background: var(--neutral-clr-three);
+  }
+
+  &__name {
+    font-size: var(--font-size-15);
+    font-style: normal;
+    line-height: 1.67;
+  }
+
+  &__price {
+    font-size: var(--font-size-14);
+    font-style: normal;
+    line-height: 1.79;
+
+    opacity: 0.5;
+  }
+
+  &__quantity {
+    text-align: right;
+    font-size: var(--font-size-15);
+    font-style: normal;
+
+    line-height: 1.67;
+
+    opacity: 0.5;
+  }
+}
