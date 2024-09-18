@@ -1,10 +1,10 @@
 import CheckoutInput from "./CheckoutInput";
 
-function CheckoutCustomerInfo() {
+function CheckoutCustomerInfo({ formValues, errors, handleInputChange }) {
   return (
     <div className="checkout-customer-info">
       <h2 className="checkout__section-title">Billing details</h2>
-      <form className="checkout__form-group checkout__form-group--billing">
+      <div className="checkout__form-group checkout__form-group--billing">
         <CheckoutInput
           checkoutInputGroupClass="checkout-input__group--name"
           label="Name"
@@ -13,8 +13,11 @@ function CheckoutCustomerInfo() {
           errorId="checkout__error-text--name"
           type="text"
           inputMode="text"
-          name="billingName"
+          name="name"
           placeholder="Alexei Ward"
+          errorMessage={errors.name}
+          value={formValues.name}
+          onChange={handleInputChange}
         />
 
         <CheckoutInput
@@ -25,8 +28,11 @@ function CheckoutCustomerInfo() {
           errorId="checkout__error-text--email"
           type="email"
           inputMode="email"
-          name="billingEmail"
+          name="email"
           placeholder="alexei@mail.com"
+          errorMessage={errors.email}
+          value={formValues.email}
+          onChange={handleInputChange}
         />
 
         <CheckoutInput
@@ -37,10 +43,13 @@ function CheckoutCustomerInfo() {
           errorId="checkout__error-text--phone"
           type="tel"
           inputMode="tel"
-          name="billingPhone"
+          name="phone"
           placeholder="+1 202-555-0136"
+          errorMessage={errors.phone}
+          value={formValues.phone}
+          onChange={handleInputChange}
         />
-      </form>
+      </div>
     </div>
   );
 }
