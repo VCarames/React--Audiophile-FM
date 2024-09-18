@@ -8,6 +8,9 @@ function CheckoutInput({
   inputMode,
   name,
   placeholder,
+  errorMessage,
+  value,
+  onChange,
 }) {
   return (
     <div className={`checkout-input__group ${checkoutInputGroupClass}`}>
@@ -19,7 +22,9 @@ function CheckoutInput({
           <span
             className="checkout__error-text"
             id={`checkout__error-text ${errorId}`}
-          ></span>
+          >
+            {errorMessage}
+          </span>
         </div>
       </div>
       <input
@@ -30,6 +35,8 @@ function CheckoutInput({
         inputMode={inputMode}
         name={name}
         placeholder={placeholder}
+        value={value}
+        onChange={onChange}
         required
       ></input>
     </div>
