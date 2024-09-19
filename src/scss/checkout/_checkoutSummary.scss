@@ -1,0 +1,17 @@
+.checkout-summary {
+  height: 100%;
+  max-height: 38.25rem;
+
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  gap: 2rem;
+
+  &__title {
+    color: var(--primary-clr-two);
+    font-size: var(--font-size-18);
+    font-weight: var(--font-weight-700);
+    line-height: normal;
+    letter-spacing: 1.286px;
+    text-transform: uppercase;
+  }
+}
