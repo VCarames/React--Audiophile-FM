@@ -1,0 +1,146 @@
+.checkout {
+  padding: 1rem 1.5rem 6.06rem 1.5rem;
+
+  background: var(--neutral-clr-two);
+
+  @media (min-width: 47.5rem) {
+    padding: 3rem 2.5rem 7.25rem 2.44rem;
+  }
+
+  &__content {
+    max-width: 69.38rem;
+    margin: 0 auto;
+  }
+
+  &__back-link {
+    margin-bottom: 1.5rem;
+
+    @media (min-width: 62.5rem) {
+      margin-bottom: 2.38rem;
+    }
+  }
+
+  &__group {
+    padding: 1.5rem 1.5rem 1.94rem 1.44rem;
+
+    border-radius: 0.5rem;
+    background: var(--neutral-clr-one);
+
+    @media (min-width: 47.5rem) {
+      padding: 1.88rem 1.69rem 1.88rem 1.75rem;
+    }
+
+    @media (min-width: 6.25rem) {
+      padding: 3.38rem 3rem 3rem 3rem;
+    }
+  }
+
+  &-summary {
+    padding: 2rem 1.5rem 2rem 1.5rem;
+    border-radius: 0.5rem;
+    background: var(--neutral-clr-one);
+
+    @media (min-width: 47.5rem) {
+      padding: 2rem 2.06rem 2rem 2.06rem;
+    }
+
+    @media (min-width: 6.25rem) {
+      padding: 2rem 2.06rem 2rem 2.06rem;
+    }
+  }
+
+  &__title {
+    color: var(--primary-clr-two);
+    font-size: var(--font-size-28);
+    font-weight: var(--font-weight-700);
+    line-height: normal;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    margin-bottom: 2rem;
+
+    @media (min-width: 760px) {
+      color: var(--primary-clr-two);
+      font-size: var(--font-size-32);
+      font-weight: var(--font-weight-700);
+      line-height: 1.13;
+      letter-spacing: 1.143px;
+      text-transform: uppercase;
+
+      margin-bottom: 2.56rem;
+    }
+  }
+
+  &__details {
+    display: grid;
+    gap: 2rem;
+
+    @media (min-width: 62.5rem) {
+      grid-template-columns: 2fr 1fr;
+    }
+  }
+
+  &__forms {
+    display: grid;
+    gap: 2rem;
+
+    @media (min-width: 62.5rem) {
+      gap: 1.88rem;
+    }
+  }
+
+  &__section-title {
+    color: var(--primary-clr-one);
+    font-size: var(--font-size-13);
+    font-weight: var(--font-weight-700);
+    line-height: 1.92;
+    letter-spacing: 0.929px;
+    text-transform: uppercase;
+
+    margin-bottom: 1rem;
+  }
+
+  &__form-group {
+    display: grid;
+    gap: 1.5rem;
+
+    &--billing {
+      grid-template-areas:
+        "name"
+        "email"
+        "phone";
+
+      @media (min-width: 47.5rem) {
+        grid-template-areas:
+          "name email"
+          "phone .";
+      }
+    }
+
+    &--shipping {
+      grid-template-areas:
+        "address"
+        "city"
+        "zip"
+        "country ";
+
+      @media (min-width: 47.5rem) {
+        grid-template-areas:
+          "address address"
+          "city zip"
+          "country .";
+      }
+    }
+  }
+}
+
+fieldset {
+  display: flex;
+  border: none;
+}
+
+.radio__group {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
