@@ -22,7 +22,12 @@ function CartContentItem({ item }) {
         </p>
       </div>
 
-      <UpdateItemQuantity productId={id} currentQuantity={currentQuantity} />
+      <UpdateItemQuantity
+        qualityControlClass="quantity-control--cart"
+        qualityControlButtonClass="quantity-control__button--cart"
+        productId={id}
+        currentQuantity={currentQuantity}
+      />
     </li>
   );
 }
