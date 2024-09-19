@@ -1,4 +1,4 @@
-import CartItem from "./CartItem";
+import CartContentItem from "./CartContentItem";
 
 function CartContentList({ cart }) {
   return cart.length === 0 ? (
@@ -9,7 +9,7 @@ function CartContentList({ cart }) {
     <div className="cart__list--content">
       <ul className="cart__list">
         {cart.map((item) => (
-          <CartItem item={item} key={item.productId} />
+          <CartContentItem item={item} key={item.productId} />
         ))}
       </ul>
     </div>
