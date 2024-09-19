@@ -20,7 +20,10 @@ function AddToCartButton({ product }) {
   }
 
   return (
-    <button className="product__add-to-cart button" onClick={handleAddToCart}>
+    <button
+      className="product__add-to-cart button button--one"
+      onClick={handleAddToCart}
+    >
       <span>Add to cart</span>
     </button>
   );
