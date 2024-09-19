@@ -1,0 +1,48 @@
+.checkout-summary-total {
+  &__totals {
+    align-self: end;
+  }
+
+  &__group {
+    display: grid;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  &__details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+  }
+
+  &__label {
+    color: var(--primary-clr-two);
+    font-family: Manrope;
+    font-size: var(--font-size-15);
+    font-weight: var(--font-weight-400);
+    line-height: 1.67;
+    text-transform: uppercase;
+
+    opacity: 0.5;
+  }
+
+  &__amount {
+    color: var(--primary-clr-two);
+    text-align: right;
+    font-size: var(--font-size-18);
+    font-weight: var(--font-weight-700);
+    line-height: normal;
+    text-transform: uppercase;
+
+    &--grand-total {
+      color: var(--primary-clr-one);
+    }
+  }
+
+  &__button {
+    width: 100%;
+
+    margin-top: 2rem;
+  }
+}
