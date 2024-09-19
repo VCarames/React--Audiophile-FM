@@ -1,8 +1,11 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
 import CheckoutCustomerInfo from "../checkout/CheckoutCustomerInfo";
 import CheckoutShippingInfo from "../checkout/CheckoutShippingInfo";
 import CheckoutSummary from "../checkout/CheckoutSummary";
+import { clearCart, getCart } from "../components/cart/CartSlice";
+import ConfirmationModal from "../checkout/CheckoutModal";
 
 function Checkout() {
   const [formValues, setFormValues] = useState({
@@ -24,6 +27,11 @@ function Checkout() {
     zip: "",
     country: "",
   });
+
+  const [isModalVisible, setIsModalVisible] = useState(true);
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const cart = useSelector(getCart);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -68,7 +76,10 @@ function Checkout() {
       setErrors(validationErrors);
     } else {
       setErrors({});
-      console.log("Form submitted:", formValues);
+
+      console.log("Form submitted:", formValues); // You can replace this with actual submission logic
+      console.log("Cart items:", cart);
+      setIsModalVisible(true);
     }
   };
 
@@ -78,6 +89,12 @@ function Checkout() {
       ...formValues,
       [name]: value,
     });
+  };
+
+  const handleModalClose = () => {
+    dispatch(clearCart()); // Clear cart using Redux action
+    setFormValues({}); // Reset form values
+    navigate("/"); // Redirect to home
   };
 
   return (
@@ -105,6 +122,11 @@ function Checkout() {
           <CheckoutSummary />
         </form>
       </div>
+
+      <ConfirmationModal
+        isVisible={isModalVisible}
+        onClose={handleModalClose}
+      />
     </div>
   );
 }
