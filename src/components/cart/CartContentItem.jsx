@@ -4,7 +4,7 @@ import { formatCurrency } from "/src/utilities/formatCurrency.js";
 import UpdateItemQuantity from "../buttons/UpdateItemQuantity";
 
 function CartContentItem({ item }) {
-  const { id, thumbnail, name, currentPrice, totalPrice } = item;
+  const { id, thumbnail, name, currentPrice } = item;
   const currentQuantity = useSelector(getCurrentQuantityById(id));
 
   return (
