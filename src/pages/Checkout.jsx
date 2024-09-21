@@ -6,6 +6,7 @@ import CheckoutShippingInfo from "../checkout/CheckoutShippingInfo";
 import CheckoutSummary from "../checkout/CheckoutSummary";
 import { clearCart, getCart } from "../components/cart/CartSlice";
 import ConfirmationModal from "../confirmationModal/ConfirmationModal";
+import CheckoutPaymentMethod from "../checkout/CheckoutPaymentMethod";
 
 function Checkout() {
   const [formValues, setFormValues] = useState({
@@ -115,6 +116,7 @@ function Checkout() {
                 errors={errors}
                 handleInputChange={handleInputChange}
               />
+              <CheckoutPaymentMethod />
             </div>
           </div>
           <CheckoutSummary />
