@@ -5,7 +5,7 @@ import CheckoutCustomerInfo from "../checkout/CheckoutCustomerInfo";
 import CheckoutShippingInfo from "../checkout/CheckoutShippingInfo";
 import CheckoutSummary from "../checkout/CheckoutSummary";
 import { clearCart, getCart } from "../components/cart/CartSlice";
-import ConfirmationModal from "../checkout/CheckoutModal";
+import ConfirmationModal from "../confirmationModal/CheckoutModal";
 
 function Checkout() {
   const [formValues, setFormValues] = useState({
@@ -77,8 +77,6 @@ function Checkout() {
     } else {
       setErrors({});
 
-      console.log("Form submitted:", formValues); // You can replace this with actual submission logic
-      console.log("Cart items:", cart);
       setIsModalVisible(true);
     }
   };
@@ -92,9 +90,9 @@ function Checkout() {
   };
 
   const handleModalClose = () => {
-    dispatch(clearCart()); // Clear cart using Redux action
-    setFormValues({}); // Reset form values
-    navigate("/"); // Redirect to home
+    dispatch(clearCart());
+    setFormValues({});
+    navigate("/");
   };
 
   return (
