@@ -1,0 +1,63 @@
+.checkout-input-radio {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  padding: 1.13rem 1.13rem 1.19rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--neutral-clr-four);
+  background: var(--neutral-clr-one);
+
+  @media (hover: hover) {
+    &:is(:hover, :focus, :focus-visible) {
+      outline: none;
+      border: 1px solid var(--primary-clr-one);
+
+      transition: 0.8s all;
+    }
+  }
+
+  &__label {
+    color: var(--primary-clr-two);
+    font-size: var(--font-size-14);
+    font-weight: var(--font-weight-700);
+    line-height: normal;
+    letter-spacing: -0.25px;
+
+    cursor: pointer;
+  }
+}
+
+input[type="radio"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: var(--neutral-clr-one);
+
+  margin: 0;
+
+  font: inherit;
+  color: currentColor;
+  width: 1.15em;
+  height: 1.15em;
+  border: 1px solid var(--neutral-clr-four);
+  border-radius: 50%;
+
+  display: grid;
+  place-content: center;
+
+  cursor: pointer;
+}
+
+input[type="radio"]::before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em var(--primary-clr-one);
+}
+
+input[type="radio"]:checked::before {
+  transform: scale(1);
+}
