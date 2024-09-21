@@ -5,7 +5,7 @@ import CheckoutCustomerInfo from "../checkout/CheckoutCustomerInfo";
 import CheckoutShippingInfo from "../checkout/CheckoutShippingInfo";
 import CheckoutSummary from "../checkout/CheckoutSummary";
 import { clearCart, getCart } from "../components/cart/CartSlice";
-import ConfirmationModal from "../confirmationModal/CheckoutModal";
+import ConfirmationModal from "../confirmationModal/ConfirmationModal";
 
 function Checkout() {
   const [formValues, setFormValues] = useState({
@@ -28,7 +28,7 @@ function Checkout() {
     country: "",
   });
 
-  const [isModalVisible, setIsModalVisible] = useState(true);
+  const [isModalVisible, setIsModalVisible] = useState(false);
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const cart = useSelector(getCart);
