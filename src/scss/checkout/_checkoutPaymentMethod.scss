@@ -1,0 +1,50 @@
+.checkout-payment {
+  &__text {
+    max-width: 54ch;
+
+    color: var(--primary-clr-two);
+    text-align: start;
+    font-size: var(--font-size-15);
+    font-style: normal;
+    font-weight: var(--font-weight-400);
+    line-height: 1.67;
+
+    opacity: 0.5;
+
+    margin-bottom: 1.88rem;
+
+    &--highlght {
+      color: var(--primary-clr-one);
+      font-weight: var(--font-weight-700);
+      text-transform: uppercase;
+    }
+  }
+
+  &__fieldset {
+    display: flex;
+    border: none;
+  }
+
+  &__radios {
+    width: 100%;
+    display: grid;
+    gap: 1.06rem;
+
+    @media (min-width: 47.5rem) {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  &__legend {
+    color: var(--primary-clr-two);
+    font-size: var(--font-size-12);
+    font-weight: var(--font-weight-700);
+    line-height: normal;
+    letter-spacing: -0.214px;
+  }
+}
+
+.checkout-payment__group {
+  display: grid;
+  gap: 1rem;
+}
