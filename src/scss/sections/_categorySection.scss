@@ -1,12 +1,19 @@
 .category {
-  margin: 0 1.5rem 7.5rem 1.5rem;
+  padding: 0 1.5rem;
+  margin-bottom: 7.5rem;
 
   @media (min-width: 47.5rem) {
-    margin: 0 2.5rem 6rem 2.44rem;
+    padding: 0 2.13rem 0 2.44rem;
+    margin-bottom: 7.5rem;
+
+    &--home {
+      margin-bottom: 5.94rem;
+    }
   }
 
   @media (min-width: 62.5rem) {
-    margin: 0 1.5rem 10.5rem 1.5rem;
+    padding: 0 1.5rem;
+    margin-bottom: 9.94rem;
   }
 
   &__content {
@@ -38,8 +45,41 @@
   &__image {
     position: absolute;
 
-    max-width: 9.19rem;
-    top: -2.69rem;
+    &--headphones {
+      top: -3.25rem;
+
+      max-width: 8.88rem;
+
+      @media (min-width: 62.5rem) {
+        top: -5rem;
+
+        max-width: 13.69rem;
+      }
+    }
+
+    &--speakers {
+      top: -3.25rem;
+
+      max-width: 9.44rem;
+
+      @media (min-width: 62.5rem) {
+        top: -4.56rem;
+
+        max-width: 13.81rem;
+      }
+    }
+
+    &--earphones {
+      top: -3.25rem;
+
+      max-width: 11.13rem;
+
+      @media (min-width: 62.5rem) {
+        top: -3.69rem;
+
+        max-width: 13.69rem;
+      }
+    }
   }
 
   &__link {
@@ -47,6 +87,7 @@
 
     display: grid;
     justify-items: center;
+    gap: 1.06rem;
 
     font-size: var(--font-size-13);
     font-weight: var(--font-weight-700);
@@ -59,6 +100,10 @@
 
     @media (min-width: 47.5rem) {
       padding: 5.5rem 3.38rem 1.38rem 3.63rem;
+    }
+
+    @media (min-width: 62.5rem) {
+      padding: 7.25rem 3.38rem 1.81rem 3.63rem;
     }
 
     @media (hover: hover) {
@@ -78,6 +123,12 @@
     line-height: normal;
     letter-spacing: 0.07rem;
     text-transform: uppercase;
+
+    @media (min-width: 1000px) {
+      font-size: var(--font-size-18);
+      letter-spacing: 1.286px;
+      text-transform: uppercase;
+    }
   }
 
   &__shop {
