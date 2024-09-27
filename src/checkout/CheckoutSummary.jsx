@@ -7,7 +7,7 @@ function CheckoutSummary() {
   const cart = useSelector(getCart);
 
   return (
-    <div className="checkout-summary">
+    <>
       <h2 className="checkout-summary__title">Summary</h2>
 
       <div className="checkout-summary__content">
@@ -18,7 +18,7 @@ function CheckoutSummary() {
         </ul>
       </div>
       <CheckoutSummaryTotal />
-    </div>
+    </>
   );
 }
 
