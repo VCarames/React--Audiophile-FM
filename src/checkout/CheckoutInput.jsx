@@ -37,6 +37,7 @@ function CheckoutInput({
         placeholder={placeholder}
         value={value}
         onChange={onChange}
+        data-invalid={!!errorMessage}
         required
       ></input>
     </div>
