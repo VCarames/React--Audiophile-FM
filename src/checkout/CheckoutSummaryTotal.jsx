@@ -40,13 +40,6 @@ function CheckoutSummaryTotal() {
           {formatCurrency(grandTotal)}
         </p>
       </div>
-
-      <button
-        type="submit"
-        className="checkout-summary-total__button button--one"
-      >
-        Continue & Pay
-      </button>
     </div>
   );
 }
