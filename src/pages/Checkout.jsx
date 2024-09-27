@@ -1,14 +1,36 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import CheckoutCustomerInfo from "../checkout/CheckoutCustomerInfo";
 import CheckoutShippingInfo from "../checkout/CheckoutShippingInfo";
 import CheckoutSummary from "../checkout/CheckoutSummary";
-import { clearCart, getCart } from "../components/cart/CartSlice";
+import { clearCart } from "../components/cart/CartSlice";
 import ConfirmationModal from "../confirmationModal/ConfirmationModal";
 import CheckoutPaymentMethod from "../checkout/CheckoutPaymentMethod";
 
 function Checkout() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const openButtonRef = useRef(null);
+
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const closeModal = () => {
+    openButtonRef.current.focus();
+    setIsModalOpen(false);
+    dispatch(clearCart());
+    setFormValues({
+      name: "",
+      email: "",
+      phone: "",
+      address: "",
+      city: "",
+      zip: "",
+      country: "",
+    });
+    navigate("/");
+  };
+
   const [formValues, setFormValues] = useState({
     name: "",
     email: "",
@@ -29,17 +51,13 @@ function Checkout() {
     country: "",
   });
 
-  const [isModalVisible, setIsModalVisible] = useState(false);
-  const navigate = useNavigate();
-  const dispatch = useDispatch();
-  const cart = useSelector(getCart);
-
   const handleSubmit = (e) => {
     e.preventDefault();
     let validationErrors = {};
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    const phoneRegex = /^[0-9]{10}$/;
+    const phoneRegex = /^\d{3}-\d{3}-\d{4}$/;
+    const zipRegex = /^\d+$/;
 
     if (formValues.name.trim() === "") {
       validationErrors.name = "Name cannot be empty!";
@@ -67,6 +85,8 @@ function Checkout() {
 
     if (formValues.zip.trim() === "") {
       validationErrors.zip = "Zip cannot be empty!";
+    } else if (!zipRegex.test(formValues.zip)) {
+      validationErrors.zip = "Zip must contain only numbers!";
     }
 
     if (formValues.country.trim() === "") {
@@ -78,7 +98,7 @@ function Checkout() {
     } else {
       setErrors({});
 
-      setIsModalVisible(true);
+      setIsModalOpen(true);
     }
   };
 
@@ -88,12 +108,6 @@ function Checkout() {
       ...formValues,
       [name]: value,
     });
-  };
-
-  const handleModalClose = () => {
-    dispatch(clearCart());
-    setFormValues({});
-    navigate("/");
   };
 
   return (
@@ -119,14 +133,22 @@ function Checkout() {
               <CheckoutPaymentMethod />
             </div>
           </div>
-          <CheckoutSummary />
+          <div className="checkout-summary">
+            <CheckoutSummary />
+            <button
+              type="submit"
+              className="checkout-summary-total__button button--one"
+              ref={openButtonRef}
+            >
+              Continue & Pay
+            </button>
+          </div>
         </form>
       </div>
 
-      <ConfirmationModal
-        isVisible={isModalVisible}
-        onClose={handleModalClose}
-      />
+      {isModalOpen && (
+        <ConfirmationModal isOpen={isModalOpen} onClose={closeModal} />
+      )}
     </div>
   );
 }
